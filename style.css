@@ -6,6 +6,17 @@
     font-family: 'Inter', sans-serif;
 }
 
+:root {
+
+    --soft_Orange: hsl(35, 77%, 62%);
+    --soft_Red: hsl(5, 85%, 63%);
+
+    --off_White: hsl(36, 100%, 99%);
+    --grayish_blue: hsl(233, 8%, 79%);
+    --dark_grayish_blue: hsl(236, 13%, 42%);
+    --dark_blue: hsl(240, 100%, 5%);
+}
+
 .header {
     max-width: 1400px;
     margin: 40px auto;
@@ -21,11 +32,11 @@
 }
 
 .header-menu ul a {
-    color: hsl(236, 13%, 42%);
+    color: var(--dark_grayish_blue);
 }
 
 .header-menu ul a:hover {
-    color: hsl(5, 85%, 63%);
+    color: var(--soft_Red);
 }
 
 .container {
@@ -36,10 +47,11 @@
 }
 
 .featured-news {
+    width: 75%;
     gap: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
 }
 .featured-news img {
     width: 100%;
@@ -50,13 +62,80 @@
     grid-row-start: 2;
     grid-row-end: 4;
     font-weight: 900;
-    font-size: 80px;
+    font-size: 68px;
 }
 
 .featured-news p {
     font-size: 24px;
+    color: var(--dark_grayish_blue);
 }
 
 .featured-news a {
     grid-row-start: 3;
+    background-color: var(--dark_blue);
+    color: var(--off_White);
+    text-align: center;
+    width: 50%;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.news {
+    background-color: var(--dark_blue);
+    color: var(--off_White);
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 40px;
+}
+
+.news h1 {
+    color: var(--soft_Orange);
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.news h2 {
+    font-size: 24px;
+}
+
+.news p {
+    color: var(--grayish_blue);
+}
+.news-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 40px 0;
+}
+
+.borda {
+    border-bottom: 2px solid grey;
+}
+
+.top-news {
+    max-width: 1400px;
+    margin: 40px auto;
+    display: flex;
+}
+.top-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+}
+
+.top-card img {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 125px;
+}
+
+.top-card span {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 48px;
+    color: var(--grayish_blue);
+    
 }
